@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nhập Dữ Liệu Người Dùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Basic Info</h2>
+        <hr>
+        <form action="#" method="post">
+            <label for="userId">Employee ID: </label>
+            <input type="text" id="userId" name="userId" readonly><br><br>
+
+            <label for="lastName">Last Name: </label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="address">Địa Chỉ:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="gender">Gender: </label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="suffix">Suffix</label>
+            <input type="text" id="suffix" name="suffix" readonly><br><br>
+
+            <input type="submit" value="Gửi">
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const userId = generateUserId();
+            document.getElementById('userId').value = userId;
+        });
+
+        function generateUserId() {
+            // Tạo một ID người dùng ngẫu nhiên (ở đây chỉ là ví dụ, có thể thay đổi cách tạo ID)
+            return Math.floor(Math.random() * 10);
+        }
+    </script>
+</body>
+</html>

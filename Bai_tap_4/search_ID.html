@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nhập ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Employee ID</h2>
+        <form onsubmit="redirectToPage(event)">
+            <label for="id">Nhập ID:</label>
+            <input type="text" id="id" name="id" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault();
+            const id = document.getElementById('id').value;
+            window.location.href = `page_${id}.html`;
+        }
+    </script>
+</body>
+</html>
